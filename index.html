@@ -15,7 +15,7 @@
     <div class="dashboard-grid">
       
       <section class="pane">
-        <span class="pane-title">󰫢 /proc/self/bio</span>
+        <span class="pane-title">About</span>
         <div class="profile">
           <img src="pfp.webp" alt="profile" class="pfp">
         </div>
@@ -28,39 +28,39 @@
       </section>
 
       <section class="pane">
-        <span class="pane-title">system/skills</span>
+        <span class="pane-title">Skills</span>
         <div class="skill-item">
           <div class="highlight">Linux</div>
           <div class="bar-container">
-            <span class="bar">████████████░░░░</span>
+            <span class="bar"></span>
             <span class="bar-percent">75%</span>
           </div>
         </div>
         <div class="skill-item">
           <div class="highlight">NixOS</div>
           <div class="bar-container">
-            <span class="bar">██████████░░░░░░</span>
+            <span class="bar"></span>
             <span class="bar-percent">60%</span>
           </div>
         </div>
         <div class="skill-item">
           <div class="highlight">Golang</div>
           <div class="bar-container">
-            <span class="bar">█░░░░░░░░░░░░░░░</span>
+            <span class="bar"></span>
             <span class="bar-percent">25%</span>
           </div>
         </div>
         <div class="skill-item">
           <div class="highlight">Godot</div>
           <div class="bar-container">
-            <span class="bar">█░░░░░░░░░░░░░░░</span>
+            <span class="bar"></span>
             <span class="bar-percent">5%</span>
           </div>
         </div>
       </section>
 
       <section class="pane">
-        <span class="pane-title">net/socials</span>
+        <span class="pane-title">Socials</span>
         <div class="bio-content">
           <a class="link" href="https://codeberg.org/b1u3rchie" target="_blank"> Codeberg.org</a> <br>
           <a class="link" href="https://www.last.fm/user/B1u3rchie" target="_blank"> Last.fm</a> <br>
@@ -70,7 +70,7 @@
       </section>
 
       <section class="pane">
-        <span class="pane-title">dev/projects</span>
+        <span class="pane-title">Projects</span>
         <div class="bio-content">
           <a class="link" href="https://codeberg.org/b1u3rchie/CalcShell/" target="_blank"> CalcShell (archived bcs vibecode)</a> <br>
           <a class="link" href="https://codeberg.org/b1u3rchie/pages/" target="_blank">Pages</a> <br>
@@ -80,7 +80,7 @@
       </section>
 
       <section class="pane">
-        <span class="pane-title">net/friends</span>
+        <span class="pane-title">Friends</span>
         <div class="bio-content">
           <a class="link" href="https://nekohepott.page" target="_blank"> Nekohepott</a> <br>
           <a class="link" href="https://zenisoft.net.ua/" target="_blank">  Melvi</a> <br>
@@ -90,7 +90,7 @@
       </section>
 
       <section class="pane">
-        <span class="pane-title">mnt/games</span>
+        <span class="pane-title">Games</span>
         <div class="bio-content">
           <a class="link" href="https://store.steampowered.com/app/1229490/ULTRAKILL/" target="_blank">Ultrakill</a> <br>
           <a class="link" href="https://store.steampowered.com/app/1127400/Mindustry/" target="_blank">Mindustry</a> <br>
@@ -99,33 +99,24 @@
         </div>
       </section>
 
-    </div>
+      <section class="pane">
+        <span class="pane-title">msg/stream</span>
+        <div class="chat-container">
+          <div id="message-stream"></div>
+          <button class="quote-box" aria-live="polite" onclick="showRandomQuote()">
+            Click for next message
+          </button>
+        </div>
+      </section>
 
-    <div class="line" style="margin-top: 30px; text-align: center;">
-      <span class="letter">
-        Thanks to everyone who supported me. <br>
-        With love, @b1u3rchie
-      </span>
     </div>
-
-    <div class="letter"  style="text-align: center;">
-      <3
-    </div>
-
-    <button class="quote-box" aria-live="polite">
-      <p id="quote-display">Initializing...</p>
-    </button>
   </main>
 
-  <pre class="ascii-mug" aria-hidden="true">
-<span class="steam s1">)))</span>
-<span class="steam s2">(((</span>
-<span class="steam s3">)))</span>
-   _ .---.
-  ( |`---'|
-   \|     |
-   : .___, :
-    `-----' </pre>
-
+  <footer>
+    <div class="letter">
+      <p>Thanks to everyone who supported me. With love, @b1u3rchie</p>
+      <p>&lt;3</p>
+    </div>
+  </footer>
 </body>
 </html>

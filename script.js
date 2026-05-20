@@ -38,14 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
     "I'm... right here, with someone you can't see.",
   ];
 
-  const quoteBox = document.querySelector('.quote-box');
-  const quoteDisplay = document.getElementById('quote-display');
+  const messageStream = document.getElementById('message-stream');
 
-  const showRandomQuote = () => {
+  window.showRandomQuote = () => {
     const index = Math.floor(Math.random() * quotes.length);
-    quoteDisplay.innerText = quotes[index];
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble';
+    bubble.innerText = quotes[index];
+    messageStream.appendChild(bubble);
+    
+    // Remove oldest message if more than 3
+    if (messageStream.children.length > 3) {
+      messageStream.removeChild(messageStream.firstChild);
+    }
   };
-
-  quoteBox?.addEventListener('click', showRandomQuote);
-  showRandomQuote();
 });
