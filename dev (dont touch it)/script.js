@@ -1,8 +1,3 @@
-window.setTheme = (theme) => {
-  document.body.className = theme;
-  localStorage.setItem('theme', theme);
-};
-
 document.addEventListener('DOMContentLoaded', () => {
   const quotes = [
     "夜があるから、朝の光は美しい。",
@@ -53,12 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     messageStream.appendChild(bubble);
     messageStream.scrollTop = messageStream.scrollHeight;
   };
-
-  // Load saved theme
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    document.body.className = savedTheme;
-  }
 
   // Auto-quote feature: show a new quote every 5 seconds
   setInterval(addRandomQuote, 5000);
