@@ -1,3 +1,21 @@
+window.setTheme = (theme) => {
+  document.body.classList.forEach(cls => {
+    if (cls.startsWith('theme-')) {
+      document.body.classList.remove(cls);
+    }
+  });
+
+  document.body.classList.add(theme);
+
+  localStorage.setItem('theme', theme);
+
+  document.documentElement.style.setProperty(
+    '--theme-refresh',
+    Date.now()
+  );
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const quotes = [
     "夜があるから、朝の光は美しい。",
@@ -36,6 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "Why is he lying?",
     "Did you know that people with guilty consciences are more easily startled by loud noise",
     "I'm... right here, with someone you can't see.",
+    "Try looking into that place where you dare not look! You'll find me there, staring out at you!",
+    "A beginning is the time for taking the most delicate care that the balances are correct.",
+    "May thy knife chip and shatter.",
+    "You fought well, Atreides...",
+    "Muad-dib leads the way.",
+    "Cousin? Is that right? Well, you wouldn't be the first relative I've killed."
   ];
 
   const messageStream = document.getElementById('message-stream');
@@ -80,4 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('beforeunload', () => {
     clearInterval(quoteInterval);
   });
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.body.className = savedTheme;
+  }
 });
